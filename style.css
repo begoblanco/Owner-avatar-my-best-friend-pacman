@@ -1,17 +1,52 @@
-h1{
-    color: #cccccc;
+html,
+body {
+  min-height: 100%;
 }
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  
-    width: 100px;
-    height: 100px;
-  }
 
-  body {
-    display: block;
-    background-image: url("./media/fondo-pacman.webp");
-    background-color: #cccccc;
-   }
+body {
+  background-image: url("./media/fondo-pacman.webp");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0px;
+}
+
+header {
+  background-color: #1b1b1b;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.mainContent {
+  margin-top: 15%;
+}
+
+#pacman-main-image,
+#fantasmito-image,
+#pacman-header-logo,
+#pacman-header-image {
+  width: 100px;
+  height: 100px;
+}
+
+/* #main{
+  display: flex;
+  background-image: url("./media/fondo-pacman.webp");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}*/
+
+/* #pacman-header-logo,
+#pacman-header-image {
+  display: block;
+  margin-left: 49%;
+  margin-right: -49%;
+  width: 100px;
+  height: 100px;
+} */
