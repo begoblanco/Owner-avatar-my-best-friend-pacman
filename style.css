@@ -1,3 +1,6 @@
+h1{
+    color: #cccccc;
+}
 img {
     display: block;
     margin-left: auto;
@@ -6,3 +9,9 @@ img {
     width: 100px;
     height: 100px;
   }
+
+  body {
+    display: block;
+    background-image: url("./media/fondo-pacman.webp");
+    background-color: #cccccc;
+   }
