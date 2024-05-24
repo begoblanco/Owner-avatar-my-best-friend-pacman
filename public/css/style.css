@@ -1,10 +1,12 @@
+@import url();
+
 html,
 body {
   min-height: 100%;
 }
 
 body {
-  background-image: url("./media/fondo-pacman.webp");
+  background-image: url("/public/assets/media/fondo-pacman.webp");
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -34,19 +36,6 @@ main {
   height: 100px;
 }
 
-/* #main{
-  display: flex;
-  background-image: url("./media/fondo-pacman.webp");
-  background-color: #cccccc;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}*/
-
-/* #pacman-header-logo,
-#pacman-header-image {
-  display: block;
-  margin-left: 49%;
-  margin-right: -49%;
-  width: 100px;
-  height: 100px;
-} */
+#pacman-image-2 {
+  display: none;
+}
