@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  background-image: url("public/assets/media/fondo-pacman.webp");
+  background-image: url("../../public/assets/media/fondo-pacman.webp");
   background-color: #cccccc;
   background-repeat: no-repeat;
   background-size: 100% 100%;
