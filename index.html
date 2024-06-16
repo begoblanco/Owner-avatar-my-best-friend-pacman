@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./public/css/style.css" />
-    <script src="app.js"></script>
+
     <title>My best friend Pacman</title>
   </head>
   <body>
@@ -29,27 +29,26 @@
       </div>
     </header>
     <main id="main">
-      <div class="mainContent">
+      <div id="mainContent">
         <img
           id="pacman-main-image"
           alt="pacman image"
           src="./public/assets/media/pacman-icon.png"
         />
 
-        <img
+        <!-- <img
           id="fantasmito-image"
           alt="fantasmico image"
           src="./public/assets/media/fantasmito.png"
-        />
-
-        <!-- <img
-          id="pacman-image-2"
-          alt="pacman image"
-          src="./public/assets/media/pacman-icon.png"
         /> -->
-
       </div>
+
+      <div id="points-counter">0000</div>
+
+      <div id="game-over">Game Over</div>
     </main>
     <footer id="footer"></footer>
+
+    <script src="app.js"></script>
   </body>
 </html>
