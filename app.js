@@ -1,45 +1,36 @@
-let fantasmico;
 let pacman;
-let cherry;
 let pointsCounter;
 
-
-let fantasmicoPresent = false;
-let cherryPresent = false;
+let gameOver = false;
 let eatenFantasmicos = 0;
 let points = 0;
 
 function loaded() {
   pointsCounter = document.getElementById("points-counter"); //seleccionar elemento
   pacman = document.getElementById("pacman-main-image");
-  // fantasmico.addEventListener("click", hidePacman);
-  spawnFantasmico();
+  window.setInterval(spawnFantasmico, 2000);
 }
 
 document.addEventListener("DOMContentLoaded", loaded); //espera a que el dom termine de cargar
 
-function eatFantasmico() {
+function eatFantasmico(event) {
   // fantasmico.style.setProperty("visibility", "hidden");
-  fantasmico.remove();
-  fantasmicoPresent = false;
+  event.target.remove();
   eatenFantasmicos++;
   increasePoints(100);
   if (eatenFantasmicos % 3 === 0) {
-    window.setTimeout(spawnCherry, 500);
+    spawnCherry();
   }
-  window.setTimeout(spawnFantasmico, 2000);
 }
 
-function eatCherry() {
-  cherry.remove();
-  cherryPresent = false;
+function eatCherry(event) {
+  event.target.remove();
   increasePoints(500);
 }
 
 function spawnFantasmico() {
-  if (!fantasmicoPresent) {
-    // fantasmico.style.setProperty("visibility", "visible");
-    fantasmico = document.createElement("img");
+  if (!gameOver) {
+    let fantasmico = document.createElement("img");
     fantasmico.id = "fantasmito-image";
     fantasmico.addEventListener("click", eatFantasmico);
     document.getElementById("mainContent").appendChild(fantasmico);
@@ -48,13 +39,10 @@ function spawnFantasmico() {
 }
 
 function spawnCherry() {
-  if (!cherryPresent) {
-    cherry = document.createElement("img");
-    cherry.id = "cherry-image";
-    cherry.addEventListener("click", eatCherry);
-    document.getElementById("mainContent").appendChild(cherry);
-    cherryPresent = true;
-  }
+  cherry = document.createElement("img");
+  cherry.id = "cherry-image";
+  cherry.addEventListener("click", eatCherry);
+  document.getElementById("mainContent").appendChild(cherry);
 }
 
 function increasePoints(p) {
@@ -65,8 +53,7 @@ function increasePoints(p) {
 
 function checkGameOver() {
   if (points >= 5000) {
+    gameOver = true;
     document.getElementById("game-over").style.display = "block";
   }
 }
-
-
